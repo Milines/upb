@@ -217,6 +217,8 @@ def price_trim(price_trim):
   
 #   --------------------------------
 
+login()
+
 while True:
     try:
         tickers=coins("KRW")
