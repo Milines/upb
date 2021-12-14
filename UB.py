@@ -7,6 +7,7 @@ import uuid
 import hashlib
 from urllib.parse import urlencode
 import time
+import sys
 
 
 def coins(current):
@@ -226,7 +227,7 @@ while True:
 
         for a in tickers:
             time.sleep(1)
-            print(f"\r{a} {tickers.index(a)+1}/{len(tickers)} 진행중입니다")
+            print(f"\r{a} {tickers.index(a)+1}/{len(tickers)} ing...",end='')
             coin_1_m=coin_history(a,'minutes',1)
             max_high_price=coin_1_m["high_price"].max() #값들중 가장 큰 가격 출력
             now_price=coin_price(a)
@@ -253,3 +254,7 @@ while True:
         time.sleep(180)
     except:
         time.sleep(180)
+    except KeyboardInterrupt:
+        # Ctrl+C 입력시 예외 발생
+        sys.exit() #종료       
+        
