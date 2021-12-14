@@ -226,7 +226,7 @@ while True:
 
         for a in tickers:
             time.sleep(1)
-            print(f"{a} {tickers.index(a)+1}/{len(tickers)} 진행중입니다")
+            print(f"\r{a} {tickers.index(a)+1}/{len(tickers)} 진행중입니다")
             coin_1_m=coin_history(a,'minutes',1)
             max_high_price=coin_1_m["high_price"].max() #값들중 가장 큰 가격 출력
             now_price=coin_price(a)
