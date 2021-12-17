@@ -219,7 +219,9 @@ def price_trim(price_trim):
 #   --------------------------------
 
 login()
-
+a=balance()
+print(a)
+'''
 while True:
     try:
         tickers=coins("KRW")
@@ -260,5 +262,6 @@ while True:
         # Ctrl+C 입력시 예외 발생
     except KeyboardInterrupt:
         time.sleep(180)
-          
+'''
+
         
