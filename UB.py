@@ -56,8 +56,8 @@ def coin_history(coin,time1='minutes',time2=''):
 def login():
     global access_key
     global secret_key
-    access_key="QoOMROlxy4IrTtXphxnhlcAqfN7CCA2Uj420uUWo"
-    secret_key="fb45xrbUghPpky5u03t1quoZxowwBi5NNgToalBJ"
+    access_key="Qo0MR0Ixy4IrTtXphxnhIcAqfN7CCA2Uj42OuUWo"
+    secret_key="fb45xrbUghPpky5uO3t1qu0ZxowwBi5NNgToalBJ"
     
 #     ----------------------
 
