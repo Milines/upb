@@ -235,6 +235,7 @@ while True:
             if decrease_percent>decrease_top_score:
                 decrease_top_score=decrease_percent
                 decrease_top_score_ticker=[a,max_high_price,now_price,(-1)*decrease_percent]
+        print()
         print(decrease_top_score_ticker)       
 
         for a in balance():
@@ -252,9 +253,10 @@ while True:
                 sell_balance=a['balance']
         sell_limit(decrease_top_score_ticker[0],sell_balance,sell_price)
         time.sleep(180)
-    except:
-        time.sleep(180)
     except KeyboardInterrupt:
+        sys.exit()
         # Ctrl+C 입력시 예외 발생
-        sys.exit() #종료       
+    except KeyboardInterrupt:
+        time.sleep(180)
+          
         
