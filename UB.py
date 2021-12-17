@@ -225,6 +225,13 @@ while True:
         tickers=coins("KRW")
         decrease_top_score=0.001
 
+        for a in balance():
+            if a['currency']=="KRW":
+                print(a['balance'])
+                buy_amount=float(a['balance'])*0.10
+                print(round(buy_amount,-2))
+                buy_amount=round(buy_amount,-2)
+                
         for a in tickers:
             time.sleep(1)
             print(f"\r{a} {tickers.index(a)+1}/{len(tickers)} ing...",end='')
@@ -238,12 +245,7 @@ while True:
         print()
         print(decrease_top_score_ticker)       
 
-        for a in balance():
-            if a['currency']=="KRW":
-                print(a['balance'])
-                buy_amount=float(a['balance'])*0.10
-                print(round(buy_amount,-2))
-                buy_amount=round(buy_amount,-2)
+
         buy_market(decrease_top_score_ticker[0],buy_amount)
         time.sleep(3)
         
